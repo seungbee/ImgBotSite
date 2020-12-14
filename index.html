@@ -59,12 +59,41 @@
     <svg class="imgbox" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="582" height="707" viewBox="0 0 582 707">
         <g id="그룹_1" data-name="그룹 1" transform="translate(-669 -332)">
             <image id="00" width="582" height="586" transform="translate(669 332)" xlink:href="https://cdn.discordapp.com/attachments/787567324570976286/787567413604122684/03.png"/>
-            <text id="03:뚱냥이_45글자" data-name="03: 뚱냥이(4~5글자)" transform="translate(961 1016)" fill="#707070" font-size="78" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo"><tspan x="-288.483" y="0">03: 뚱냥(4~5글자)</tspan></text>
+            <text id="03:뚱냥이_45글자" data-name="03: 뚱냥이(4~5글자)" transform="translate(961 1016)" fill="#707070" font-size="78" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo"><tspan x="-288.483" y="0">03: 뚱냥이(5글자)</tspan></text>
         </g>
       </svg>
     
-    <p class="text">made by Seungbee
+    <p class="text" onclick="scrollup()">made by Seungbee
+    <script>
+
+      var i = 0
+      var di = 1
+      var speed = 10
+
+      function scrollup(){
+        window.scrollTo(0, window.scrollY - 5)
+        if(window.scrollY > 0){
+          setTimeout("scrollup()", 10)
+        }
+        else{
+          setTimeout("scrlol()", 10)
+        }
+      }
+      function scrlol(){
+        window.scrollTo(0,i)
+        if(i > 2400){
+          di = -di
+        }
+        if(i < -10){
+          di = -di
+        }
+
+        i += speed * di
+        speed += 0.1
+        setTimeout("scrlol()", 10)
+      }
       
+    </script>  
 </body>
 
 
